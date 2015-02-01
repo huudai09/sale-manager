@@ -1,0 +1,337 @@
+@font-face {
+    font-family: roboto;
+    src: url('font/Roboto1.woff2?run5rn') format('woff'),
+        url('font/Roboto2.woff2?run5rn') format('woff'),
+        url('font/Roboto3.woff2?run5rn') format('woff');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: roboto, arial, tahoma;
+
+    font-size: 16px;
+    line-height: 20px;
+    background: #F0F3F5;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#wrapper{
+    overflow: auto;
+}
+
+#side, #content, #side:before, #content:before{
+    padding: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+#side{
+    width: 15%;
+}
+#side:before{
+    content: '';
+    width: 15%;
+    background: #425777;
+    z-index: -1;
+}
+
+#content{
+    width: 85%;
+    background: #F0F3F5;
+}
+
+#content:before{
+    content: '';
+    width: 85%;
+    background: #F0F3F5;
+    z-index: -1;
+}
+
+#side, #content{
+    float: left;
+}
+
+#side:before{
+    width: 15%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    border-right: 1px solid #1D365D;
+}
+
+#content:before{
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 15%;
+    bottom: 0px;
+}
+
+#wrapper.noside #content{
+    width: 100%;
+}
+#wrapper.noside #content:before{
+    width: 100%;
+    left: 0px;
+}
+
+h2.title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #0B1E2C;
+    font-weight: normal;
+    margin-top: -15px;
+}
+
+.h2 {
+    margin-bottom: 20px;
+}
+
+.table{
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0px 2px 3px rgba(47, 47, 47, 0.39);
+}
+.table th{
+    color: #1C8EDA;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #DEE6EC !important;
+}
+.table td,
+.table th{
+    padding: 10px;
+    border-bottom: 1px solid #DEE6EC;
+    text-align: center;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.dl-table {
+    display: table;
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0px 2px 3px -1px rgba(47, 47, 47, 0.39);
+    margin-bottom: 30px;
+}
+
+.dl-row {
+    display: table-row;
+}
+
+.dl-row:hover {
+    background: #F9F9F9;
+}
+
+.dl-cell {
+    display: table-cell;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #DEE6EC;
+    text-align: center;
+}
+
+.dl-row:last-child .dl-cell{
+    border-bottom: none;
+}
+
+.dl-cell.dl-th {
+    font-weight: bold;
+    color: #F0F3F5;
+    font-size: 15px;
+    background: #425777;
+    text-shadow: 0px 0px 3px black;
+    text-transform: uppercase;
+    border-bottom: 2px solid #425777 !important;
+}
+
+
+#side a {
+    display: block;
+    font-size: 16px;
+    padding: 10px 30px;
+    color: #7695BB;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#side a.active{
+    background: #F0F3F5;
+}
+
+#side, #side:before{
+    padding: 20px 0px;
+}
+
+/* FORM */
+
+.aform-box {
+    background: #fff;
+    display: inline-block;
+    min-width: 360px;
+    box-shadow: 0px 2px 3px rgba(47, 47, 47, 0.39);
+    margin-bottom: 30px;
+}
+
+.aform-row {
+    padding: 20px;
+    border-bottom: 1px solid #DEE6EC;
+    font-size: 14px;
+}
+
+.aform-row:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.aform-row:last-child {
+    border: none;
+}
+
+.aform-row h5 {
+    font-weight: normal;
+}
+
+.aform-inp {
+    border: none;
+    padding: 4px 0px;
+    outline: none;
+    width: 100%;
+    font-family: roboto, Arial;
+    color: #A5A5A5;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background: #1C8EDA;
+    border: none;
+    color: #fff;
+    text-shadow: 0px 0px 2px #0C5688;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-act.plus {
+    width: 45px;
+    height: 45px;
+    background: #28A3F5;
+    display: inline-block;
+    line-height: 43px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFF;
+    text-shadow: 0px 0px 3px #1C72AB;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.aform-row.aform-implement {
+    padding: 15px 20px;
+}
+
+.aform-row.aform-implement .btn:last-child{
+    margin-bottom: 0px;
+}
+
+.af2 .aform-col {width: 50%;}
+.af3 .aform-col {width: 33%;}
+.af4 .aform-col {width: 25%;}
+.af5 .aform-col {width: 20%;}
+.aform-col {
+    display: block;
+    float: left;
+    border-right: 1px solid #DEE6EC;
+    box-sizing: border-box;
+}
+
+.aform-col:last-child {
+    border: none;
+}
+
+.aform-col:not(:first-child) {
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.frame2nd{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    overflow-x: hidden;
+    border-left: 1px solid #D8DCDF;
+
+    background: #fff;
+
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    transform: translateX(400px);
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.frame2nd.active{
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.frame2nd .aform-box{
+    min-width: 100%;
+    box-shadow: none;
+    border: 1px solid #DEE6EC;
+}
